@@ -1,4 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #f8f4f0;
+  --color-text-black: #000201;
+  --color-text-gray: #d3d3d3;
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-    background: black;
-    color: wheat;
+  font-family: "Archivo", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-black);
+
+  line-height: 1.7;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+  text-align: left;
+  color: var(--color-text-gray);
+}
+
+.text-dark {
+  color: var(--color-text-black);
+}
+
+a {
+  color: var(--color-text-gray);
+  transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-text-black);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-text-black);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--color-text-gray);
+    color: var(--color-text-black);
+    border-color: transparent;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
