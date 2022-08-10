@@ -1,0 +1,16 @@
+header {
+    height: 100vh;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: left;
+    height: 100%;
+    position: relative;
+}
+
+h5 {
+    font-weight: 500;
+    margin-left: 1rem;
+}
