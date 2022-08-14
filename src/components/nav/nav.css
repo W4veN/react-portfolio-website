@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+    padding-top: 10px;
+    flex-direction: column;
+    height: 0;
+}
+nav {
+    position: sticky;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    float: left;
+    top:0;
+}
