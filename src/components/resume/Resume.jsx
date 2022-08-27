@@ -8,11 +8,16 @@ const Resume= () => {
             <h1> Resume </h1>
             <p> A summary of my education, work history, credentials, and </p>
             <p> other accomplishments and skills </p>
-            <p> I am currently exploring the UI/UX design, </p>
-            <p> Tailwind-css and NextJS. </p>
-            <p> I am either smiling or looking super serious.</p>
-            <p> If it's the latter one, I am probably thinking </p>
-            <p> about food. </p>
+            <p> 2021-2022 <b>Quality Engineer Intern</b></p>
+            <p> Fandom </p>
+            <p> - x </p>
+            <p> - y </p>
+            <p> - z </p>
+            <p> 2021-2022 <b>Junior Quality Engineer</b></p>
+            <p> Fandom </p>
+            <p> - x </p>
+            <p> - y </p>
+            <p> - z </p>
         </div>
         </section>
     )
