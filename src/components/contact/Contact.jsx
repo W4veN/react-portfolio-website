@@ -1,53 +1,61 @@
 import React, {useState} from "react";
 import './contact.css';
+import { send } from 'emailjs-com';
 
 const Contact= () => {
-        const [inputs, setInputs] = useState({});
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        message: '',
+        reply_to: '',
+    });
 
-        const handleChange = (event) => {
-            const name = event.target.name;
-            const value = event.target.value;
-            setInputs(values => ({...values, [name]: value}))
-        }
+    const onSubmit = (e) => {
+        e.preventDefault();
+        send(
+            'service_rvmka5d',
+            'template_bdnhxl4',
+            toSend,
+            'X2dAvIPXx6ZVso8QT'
+        )
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+                console.log('FAILED...', err);
+            });
+    };
 
-        const handleSubmit = (event) => {
-            event.preventDefault();
-            alert(inputs);
-        }
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
     return (
         <section id="contact">
             <div className="container contact__container">
                 <h1> Contact </h1>
                 <p> Let's chat! </p>
-                <form onSubmit={handleSubmit}>
-                    <label>Enter your name:
-                        <input
-                            type="text"
-                            name="username"
-                            value={inputs.username || ""}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>Enter your email:
-                        <input
-                            type="email"
-                            name="email"
-                            value={inputs.email || ""}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>Message:
-                        <input
-                            type="text"
-                            name="message"
-                            value={inputs.message || ""}
-                            onChange={handleChange}
-                        />
-                    </label>
+                <form onSubmit={onSubmit}>
                     <input
-                        type="submit"
-                        value="Send"
+                        type='text'
+                        name='from_name'
+                        placeholder='Your name'
+                        value={toSend.from_name}
+                        onChange={handleChange}
                     />
+                    <input
+                        type='text'
+                        name='message'
+                        placeholder='Your message'
+                        value={toSend.message}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type='text'
+                        name='reply_to'
+                        placeholder='Your email'
+                        value={toSend.reply_to}
+                        onChange={handleChange}
+                    />
+                    <button type='submit'> Submit </button>
                 </form>
             </div>
         </section>
