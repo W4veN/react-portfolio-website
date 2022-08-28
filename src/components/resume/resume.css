@@ -1,0 +1,11 @@
+.resume__container {
+    text-align: left;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+h5 {
+    font-weight: 500;
+    margin-left: 1rem;
+}
