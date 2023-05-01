@@ -3,7 +3,7 @@ class LandingPage {
     this.navbarSelector = ".nav";
   }
   open() {
-    return browser.url(`https://localhost:3001/`);
+    return browser.url(`http://localhost:3000`);
   }
 }
 
