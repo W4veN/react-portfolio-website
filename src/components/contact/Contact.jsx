@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './contact.css';
 import { send } from 'emailjs-com';
 
-const Contact= () => {
+const Contact = () => {
     const [toSend, setToSend] = useState({
         from_name: '',
         message: '',
@@ -31,7 +31,7 @@ const Contact= () => {
     return (
         <section id="contact">
             <div className="container contact__container">
-                <h1> Contact </h1>
+                <h1> Contact (WiP) </h1>
                 <p> Let's chat! </p>
                 <form onSubmit={onSubmit}>
                     <input

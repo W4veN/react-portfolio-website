@@ -6,13 +6,10 @@ const About = () => {
     <section id="about">
       <div className="container about__container">
         <h1> I'm Karol Wajs </h1>
-        <p> And ... I am Quality Engineer </p>
-        <p> Based in the beautiful city of Bali, Indonesia. </p>
-        <p> I am currently exploring the UI/UX design, </p>
-        <p> Tailwind-css and NextJS. </p>
-        <p> I am either smiling or looking super serious.</p>
-        <p> If it's the latter one, I am probably thinking </p>
-        <p> about food. </p>
+        <p> and i'm working as Quality Engineer in Fandom. I have almost two years of experience, mostly focused on testing ads on world’s
+          largest fan wiki platform Fandom, but also familiar with mobile apps. As a young dog owner almost all of
+          my free time is dedicated to him, the rest I spend on watching horror movies, playing football and
+          competitive video games.</p>
       </div>
     </section>
   );
