@@ -11,6 +11,8 @@ jobs:
           node-version: 18
       - name: Install
         run: npm install
+      - name: Run the page
+        run: npm start
       - name: Test
         run: npm run wdio
       - uses: actions/upload-artifact@v1
