@@ -3,6 +3,7 @@ ul {
     padding-top: 10px;
     flex-direction: column;
     height: 0;
+    font-size: 25px;
 }
 nav {
     position: sticky;
