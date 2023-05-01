@@ -11,8 +11,6 @@ jobs:
           node-version: 18
       - name: Install
         run: npm install
-      - name: Build
-        run: npm build --if-present
       - name: Run the page
         run: npm start & npx wait-on http://127.0.0.1:3000
       - name: Test
