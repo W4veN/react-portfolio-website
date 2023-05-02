@@ -9,3 +9,22 @@ h5 {
     font-weight: 500;
     margin-left: 1rem;
 }
+.btn-about {
+    text-align: left;
+    height: 100%;
+    position: absolute;
+    width: 170px;
+    display:flex;
+    justify-content: space-between;
+}
+.btn-about a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #226699;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
