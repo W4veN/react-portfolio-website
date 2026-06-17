@@ -1,65 +1,34 @@
-import React, {useState} from "react";
-import './contact.css';
-import { send } from 'emailjs-com';
+import React from "react";
+import "./contact.css";
 
 const Contact = () => {
-    const [toSend, setToSend] = useState({
-        from_name: '',
-        message: '',
-        reply_to: '',
-    });
+  return (
+    <section id="contact">
+      <div className="container contact__container">
+        <h1>Let's work together</h1>
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        send(
-            'service_rvmka5d',
-            'template_bdnhxl4',
-            toSend,
-            'X2dAvIPXx6ZVso8QT'
-        )
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            })
-            .catch((err) => {
-                console.log('FAILED...', err);
-            });
-    };
+        <p className="contact__text">
+          I'm currently open to new opportunities, collaborations, and
+          interesting projects in QA, test automation, and software quality
+          engineering. Feel free to reach out or connect with me below.
+        </p>
 
-    const handleChange = (e) => {
-        setToSend({ ...toSend, [e.target.name]: e.target.value });
-    };
-    return (
-        <section id="contact">
-            <div className="container contact__container">
-                <h1> Contact (WiP) </h1>
-                <p> Let's chat! </p>
-                <form onSubmit={onSubmit}>
-                    <input
-                        type='text'
-                        name='from_name'
-                        placeholder='Your name'
-                        value={toSend.from_name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type='text'
-                        name='message'
-                        placeholder='Your message'
-                        value={toSend.message}
-                        onChange={handleChange}
-                    />
-                    <input
-                        type='text'
-                        name='reply_to'
-                        placeholder='Your email'
-                        value={toSend.reply_to}
-                        onChange={handleChange}
-                    />
-                    <button type='submit'> Submit </button>
-                </form>
-            </div>
-        </section>
-    )
-}
+        <div className="contact__buttons">
+          <a href="https://www.facebook.com/kr.wajs/" target="_blank" rel="noreferrer">
+            <i className="bx bxl-facebook-square"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/karol-wajs-0b96111b9/" target="_blank" rel="noreferrer">
+            <i className="bx bxl-linkedin-square"></i>
+          </a>
+
+          <a href="https://github.com/W4veN" target="_blank" rel="noreferrer">
+            <i className="bx bxl-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Contact;

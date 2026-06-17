@@ -58,12 +58,18 @@ h1 {
 section {
   margin-top: 3rem;
   margin-left: 4rem;
-  height: 100vh;
   margin-right: 14rem;
+
+  min-height: 100vh;
+  /* instead of height */
+  height: auto;
+  /* allow content to grow */
+  padding-bottom: 4rem;
+  /* breathing space */
 }
 
-section > h2,
-section > h5 {
+section>h2,
+section>h5 {
   text-align: left;
   color: var(--color-text-gray);
 }

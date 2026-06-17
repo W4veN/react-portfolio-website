@@ -1,30 +1,52 @@
 .about__container {
-    text-align: left;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+  text-align: left;
 }
 
+/* headings */
 h5 {
-    font-weight: 500;
-    margin-left: 1rem;
+  font-weight: 500;
 }
+
+/* social buttons */
 .btn-about {
-    text-align: left;
-    height: 100%;
-    position: absolute;
-    width: 170px;
-    display:flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
 }
+
 .btn-about a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #226699;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 2px solid #226699;
+  border-radius: 50%;
+
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* gallery */
+.about__gallery {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about__gallery img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.about__gallery img:hover {
+  transform: scale(1.05);
 }
