@@ -1,14 +1,60 @@
-ul {
-    list-style: none;
-    padding-top: 10px;
-    flex-direction: column;
-    height: 0;
-    font-size: 25px;
+.nav-wrapper {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-nav {
-    position: sticky;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    float: left;
-    top:0;
+
+/* title */
+.nav__title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #226699;
+  margin-bottom: 1rem;
+}
+
+/* nav list */
+.nav__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* hover */
+.nav__links a:hover {
+  color: #226699;
+}
+
+/* underline animation */
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 0%;
+  height: 2px;
+  background-color: #226699;
+
+  transition: width 0.3s ease;
+}
+
+.nav__links a:hover::after {
+  width: 100%;
 }

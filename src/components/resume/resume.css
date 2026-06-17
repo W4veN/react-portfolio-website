@@ -1,9 +1,13 @@
 .resume__container {
-    text-align: left;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+  text-align: left;
 }
-h1, h2 {
-    color: #226699;
+
+h1,
+h2 {
+  color: #226699;
+}
+
+.resume__container p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }

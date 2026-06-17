@@ -1,31 +1,40 @@
 import React from "react";
 import "./about.css";
 
+import img1 from "../../assets/1.jpg";
+import img2 from "../../assets/2.jpg";
+import img3 from "../../assets/3.jpg";
+
 const About = () => {
   return (
     <section id="about">
       <div className="container about__container">
-        <h1> I'm Karol Wajs </h1>
-        <p>
-          {" "}
-          and i'm working as Quality Engineer in Fandom. I have almost two years
-          of experience, mostly focused on testing ads on world’s largest fan
-          wiki platform Fandom, but also familiar with mobile apps. As a young
-          dog owner almost all of my free time is dedicated to him, the rest I
-          spend on watching horror movies, playing football and competitive
-          video games.
-        </p>
-        <div className="btn-about">
-          <a href="https://www.facebook.com/kr.wajs/">
-            <i className="bx bxl-facebook-square"></i>
-          </a>
+        <h1>I'm Karol Wajs</h1>
 
-          <a href="https://www.linkedin.com/in/karol-wajs-0b96111b9/">
-            <i className="bx bxl-linkedin-square"></i>
-          </a>
-          <a href="https://github.com/W4veN">
-            <i className="bx bxl-github"></i>
-          </a>
+        <p>
+          Senior Quality Engineer with 5+ years of experience in software
+          quality assurance, test automation, and quality strategy. I
+          specialize in building scalable Playwright automation frameworks,
+          improving CI/CD pipelines, and driving quality across complex web
+          applications.
+        </p>
+
+        <p>
+          My experience includes manual testing, API testing, accessibility,
+          visual regression, contract testing, and AI-assisted testing
+          workflows. I enjoy improving processes, mentoring, and delivering
+          reliable software.
+        </p>
+
+        <p>
+          Outside of work I enjoy football, gaming, horror movies, and spending
+          time with my dog.
+        </p>
+
+        <div className="about__gallery">
+          <img src={img1} alt="Interest 1" />
+          <img src={img2} alt="Interest 2" />
+          <img src={img3} alt="Interest 3" />
         </div>
       </div>
     </section>
