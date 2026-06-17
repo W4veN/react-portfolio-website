@@ -61,11 +61,18 @@ section {
   margin-right: 14rem;
 
   min-height: 100vh;
-  /* instead of height */
   height: auto;
-  /* allow content to grow */
   padding-bottom: 4rem;
-  /* breathing space */
+}
+
+/* 📱 MOBILE FIX */
+@media screen and (max-width: 768px) {
+  section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    /* space under navbar */
+  }
 }
 
 section>h2,

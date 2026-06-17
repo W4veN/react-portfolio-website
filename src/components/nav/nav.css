@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  z-index: 1000;
 }
 
 /* title */
@@ -31,17 +33,15 @@
   text-decoration: none;
   color: #000;
   font-size: 1rem;
-
   position: relative;
   transition: color 0.3s ease;
 }
 
-/* hover */
 .nav__links a:hover {
   color: #226699;
 }
 
-/* underline animation */
+/* underline */
 .nav__links a::after {
   content: "";
   position: absolute;
@@ -57,4 +57,38 @@
 
 .nav__links a:hover::after {
   width: 100%;
+}
+
+/* ========================= */
+/* 📱 MOBILE FULL WIDTH NAV */
+/* ========================= */
+@media screen and (max-width: 768px) {
+  .nav-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.5rem;
+
+    background: var(--color-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav__title {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .nav__links {
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+    gap: 1.2rem;
+  }
 }
